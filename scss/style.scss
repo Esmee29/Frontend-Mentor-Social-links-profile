@@ -1,72 +1,100 @@
-// variables
+// Variables
 
-$Green: hsl(75, 94%, 57%);
+$Yellow: hsl(47, 88%, 63%);
 $White: hsl(0, 0%, 100%);
-$Grey: hsl(0, 0%, 20%);
-$DarkGrey: hsl(0, 0%, 12%);
-$OffBlack: hsl(0, 0%, 8%);
+$Grey: hsl(0, 0%, 50%);
+$Black: hsl(0, 0%, 7%);
+
+$Figtree: "Figtree", sans-serif;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
 
 body{
-    font-family: 'Inter', sans-serif;
-    background-color: $OffBlack;
+    height: 100vh;
+    width: 100%;
+    background-color: $Yellow;
+    color: $Black;
+    font-family: $Figtree;
+    font-style: normal;
+    line-height: 150%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    
 }
 
-.card{
-    width: 400px;
-    height: 600px;
-    border-radius: 20px;
-    background-color: $DarkGrey;
+.card {
     display: flex;
+    width: 384px;
+    padding: 24px;
     flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-img{
-    border-radius: 3rem;
-    width: 6rem;
-    margin: 1.25rem;
-}
-
-button{
-    width: 360px;
-    height: 50px;
-    transition: 0.2s ease;
-    background-color: hsl(0, 0%, 20%);
-    border: 0px solid;
-    color: $White;
-    margin: 10px;
-    border-radius: 10px;
-    font-weight: 700;
-    font-size: 16px;
-    gap: 60px;
-    &:hover{
-        background-color: $Green;
-        color: $OffBlack;
-        cursor: pointer;
+    align-items: flex-start;
+    gap: 24px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 1px solid $Black;
+    background: $White;
+    box-shadow: 8px 8px 0px 0px $Black;
+    margin-left: 1.75rem;
+    margin-right: 1.75rem;
+    &:hover {
+        box-shadow: 16px 16px 0px 0px $Black;
     }
-}
-
-h1{
-    color: $White;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 0;
-}
-
-.location{
-    color: $Green;
-    font-weight: 600;
-
-}
-
-.sub-heading{
-    color: $White;
-    font-weight: 400;
-    margin-top: 0;
+    @media only screen and (max-width: 480px) {
+        width: 327px;
+    }
+    .card-image {
+        align-items: center;
+        align-self: stretch;
+        border-radius: 10px;
+    }
+    .tag{
+        font-weight: 800;
+        padding: 4px 12px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 4px;
+        background: $Yellow;
+    }
+    .date{
+        font-size: 14px;
+        font-weight: 500;
+        
+    }
+    .card-title {
+        align-self: stretch;
+        font-size: 24px;
+        font-weight: 800;
+        &:hover {
+            color: $Yellow; 
+            cursor: pointer; 
+        }
+    }
+    .card-text{
+        align-self: stretch;
+        color: $Grey;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .author{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        .avatar{
+            width: 32px;
+height: 32px;
+border-radius: 32px;
+background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+        }
+        .author-name{
+            font-size: 14px;
+            font-weight: 800;
+        }
+    }
 }
