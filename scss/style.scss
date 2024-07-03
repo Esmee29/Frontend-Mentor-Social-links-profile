@@ -5,3 +5,68 @@ $White: hsl(0, 0%, 100%);
 $Grey: hsl(0, 0%, 20%);
 $DarkGrey: hsl(0, 0%, 12%);
 $OffBlack: hsl(0, 0%, 8%);
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: $OffBlack;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card{
+    width: 400px;
+    height: 600px;
+    border-radius: 20px;
+    background-color: $DarkGrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+img{
+    border-radius: 3rem;
+    width: 6rem;
+    margin: 1.25rem;
+}
+
+button{
+    width: 360px;
+    height: 50px;
+    transition: 0.2s ease;
+    background-color: hsl(0, 0%, 20%);
+    border: 0px solid;
+    color: $White;
+    margin: 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    gap: 60px;
+    &:hover{
+        background-color: $Green;
+        color: $OffBlack;
+        cursor: pointer;
+    }
+}
+
+h1{
+    color: $White;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.location{
+    color: $Green;
+    font-weight: 600;
+
+}
+
+.sub-heading{
+    color: $White;
+    font-weight: 400;
+    margin-top: 0;
+}
